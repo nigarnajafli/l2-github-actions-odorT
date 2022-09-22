@@ -1,13 +1,10 @@
-name: CI/CD with Gradle, Java17(corretto)
+name: Gradle Build & Test
 
 on:
   push:
     branches: [ "develop" ]
   pull_request:
     branches: [ "develop" ]
-
-# permissions:
-#   contents: read
 
 jobs:
   build:
@@ -22,7 +19,6 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    # permissions: write-all
 
     steps:
     - uses: actions/checkout@v3
